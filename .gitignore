@@ -7,3 +7,10 @@
 *.iws
 *.iml
 *.ipr
+
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+/ticket-service/target/
