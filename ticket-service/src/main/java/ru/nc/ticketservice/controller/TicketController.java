@@ -17,6 +17,10 @@ import java.util.UUID;
 public class TicketController {
     private final TicketService ticketService;
 
+    public TicketController(TicketService ticketService) {
+        this.ticketService = ticketService;
+    }
+
     @PostMapping
     @ResponseStatus(HttpStatus.OK)
     public UUID createTicket(@RequestBody CreateTicketRequest request) {
@@ -42,4 +46,5 @@ public class TicketController {
     public void deleteTicket(@PathVariable("ticketId") UUID ticketId) throws TicketNotFoundException {
         ticketService.deleteTicket(ticketId);
     }
+
 }
